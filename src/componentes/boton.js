@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../hojas-de-estilo/Boton.css'
+
 //Función Boton: Serán los botones que se usarán en la calculadora
 //Los props permiten importar y exportar valores entre funciones
 //Props.children permite pasar valores del JS al HTML
@@ -9,10 +11,8 @@ function Boton(props) {
     return isNaN(valor) && (valor != '.') && (valor != '=');
   };
 
-
-
   return (
-    <div className={`boton-contenedor ${esOperador(props.children) ? 'operador' : null}`}>
+    <div className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}>
       {props.children}
     </div>
   );
