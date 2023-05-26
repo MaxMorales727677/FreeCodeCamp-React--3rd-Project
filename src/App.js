@@ -1,5 +1,7 @@
 import './App.css';
 import Boton from './componentes/boton';
+import Pantalla from './componentes/pantalla';
+import BotonClear from './componentes/botonClear';
 import freeCodeCampoLogo from './imagenes/FreeCodeCamp_logo.png';
 
 
@@ -13,6 +15,9 @@ function App() {
         />
       </div> 
       <div className='contenedor-calculadora'> 
+        <div className='pantalla'> 
+          <Pantalla />
+        </div>
         <div className='fila'> 
           <Boton> 1 </Boton>
           <Boton> 2 </Boton>
@@ -41,7 +46,9 @@ function App() {
           <Boton> / </Boton>
           
         </div>
-        
+        <div className='fila'> 
+          <BotonClear> Clear </BotonClear>
+        </div>
       </div>
     </div>
   );
