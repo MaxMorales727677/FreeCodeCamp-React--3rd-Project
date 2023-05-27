@@ -16,8 +16,12 @@ function App() {
     setInput(input + val);
   };
 
-  const calcularResultado = () => { 
-    setInput(evaluate(input));
+  const calcularResultado = () => {
+    if(input) { 
+      setInput(evaluate(input));
+    } else { 
+      alert("Por favor, ingrese valores a calcular...");
+    }
   };
 
   return (
@@ -31,31 +35,31 @@ function App() {
       <div className='contenedor-calculadora'> 
         <Pantalla input={input}/>
         <div className='fila'> 
-          <Boton hacerClic={agregarInput}> 1 </Boton>
-          <Boton hacerClic={agregarInput}> 2 </Boton>
-          <Boton hacerClic={agregarInput}> 3 </Boton>
-          <Boton hacerClic={agregarInput}> + </Boton>
+          <Boton hacerClic={agregarInput}>1</Boton>
+          <Boton hacerClic={agregarInput}>2</Boton>
+          <Boton hacerClic={agregarInput}>3</Boton>
+          <Boton hacerClic={agregarInput}>+</Boton>
           
         </div>
         <div className='fila'> 
-          <Boton hacerClic={agregarInput}> 4 </Boton>
-          <Boton hacerClic={agregarInput}> 5 </Boton>
-          <Boton hacerClic={agregarInput}> 6 </Boton>
-          <Boton hacerClic={agregarInput}> - </Boton>
+          <Boton hacerClic={agregarInput}>4</Boton>
+          <Boton hacerClic={agregarInput}>5</Boton>
+          <Boton hacerClic={agregarInput}>6</Boton>
+          <Boton hacerClic={agregarInput}>-</Boton>
           
         </div>
         <div className='fila'> 
-          <Boton hacerClic={agregarInput}> 7 </Boton>
-          <Boton hacerClic={agregarInput}> 8 </Boton>
-          <Boton hacerClic={agregarInput}> 9 </Boton>
-          <Boton hacerClic={agregarInput}> x </Boton>
+          <Boton hacerClic={agregarInput}>7</Boton>
+          <Boton hacerClic={agregarInput}>8</Boton>
+          <Boton hacerClic={agregarInput}>9</Boton>
+          <Boton hacerClic={agregarInput}>x</Boton>
           
         </div>
         <div className='fila'> 
-          <Boton hacerClic={agregarInput}> 0 </Boton>
-          <Boton hacerClic={agregarInput}> . </Boton>
-          <Boton hacerClic={calcularResultado}> = </Boton>
-          <Boton hacerClic={agregarInput}> / </Boton>
+          <Boton hacerClic={agregarInput}>0</Boton>
+          <Boton hacerClic={agregarInput}>.</Boton>
+          <Boton hacerClic={calcularResultado}>=</Boton>
+          <Boton hacerClic={agregarInput}>/</Boton>
           
         </div>
         <div className='fila'> 
