@@ -17,8 +17,10 @@ function App() {
   };
 
   const calcularResultado = () => {
+
     if(input) { 
-      setInput(evaluate(input));
+      const resultado = evaluate(input.toString());
+      setInput(resultado.toString());
     } else { 
       alert("Por favor, ingrese valores a calcular...");
     }
