@@ -4,8 +4,17 @@ import Pantalla from './componentes/pantalla';
 import BotonClear from './componentes/botonClear';
 import freeCodeCampoLogo from './imagenes/FreeCodeCamp_logo.png';
 
+import { useState } from 'react';
+
 
 function App() {
+
+  const [input, setInput] = useState('');
+
+  const agregarInput = val => { 
+    setInput(input + val);
+  };
+
   return (
     <div className="App">
       <div className='freecodecamp-logo-contenedor'> 
@@ -15,35 +24,33 @@ function App() {
         />
       </div> 
       <div className='contenedor-calculadora'> 
-        <div className='pantalla'> 
-          <Pantalla />
-        </div>
+        <Pantalla input={input}/>
         <div className='fila'> 
-          <Boton> 1 </Boton>
-          <Boton> 2 </Boton>
-          <Boton> 3 </Boton>
-          <Boton> + </Boton>
+          <Boton hacerClic={agregarInput}> 1 </Boton>
+          <Boton hacerClic={agregarInput}> 2 </Boton>
+          <Boton hacerClic={agregarInput}> 3 </Boton>
+          <Boton hacerClic={agregarInput}> + </Boton>
           
         </div>
         <div className='fila'> 
-          <Boton> 4 </Boton>
-          <Boton> 5 </Boton>
-          <Boton> 6 </Boton>
-          <Boton> - </Boton>
+          <Boton hacerClic={agregarInput}> 4 </Boton>
+          <Boton hacerClic={agregarInput}> 5 </Boton>
+          <Boton hacerClic={agregarInput}> 6 </Boton>
+          <Boton hacerClic={agregarInput}> - </Boton>
           
         </div>
         <div className='fila'> 
-          <Boton> 7 </Boton>
-          <Boton> 8 </Boton>
-          <Boton> 9 </Boton>
-          <Boton> x </Boton>
+          <Boton hacerClic={agregarInput}> 7 </Boton>
+          <Boton hacerClic={agregarInput}> 8 </Boton>
+          <Boton hacerClic={agregarInput}> 9 </Boton>
+          <Boton hacerClic={agregarInput}> x </Boton>
           
         </div>
         <div className='fila'> 
-          <Boton> 0 </Boton>
-          <Boton> . </Boton>
-          <Boton> = </Boton>
-          <Boton> / </Boton>
+          <Boton hacerClic={agregarInput}> 0 </Boton>
+          <Boton hacerClic={agregarInput}> . </Boton>
+          <Boton hacerClic={agregarInput}> = </Boton>
+          <Boton hacerClic={agregarInput}> / </Boton>
           
         </div>
         <div className='fila'> 
